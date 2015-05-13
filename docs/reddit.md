@@ -102,7 +102,7 @@ Your feedback **may be removed and ineligible for earning rep** if it is:
 * **Only a reference to privately-given feedback.** Feedback should be public. Comments to the effect of "check your inbox, I left feedback there" are not eligible for earning reputation.
 * **A critique of others' subjective feedback.** Contradicting others' feedback is expected &mdash; encouraged, even, because it gives the requester a greater variety of opinions to work with &mdash; but do it in a way that is clearly directed at the requester, not at the person giving feedback. Otherwise, threads can quickly spiral into arguments about which opinion was "right." That said, if there is something objectively wrong with the feedback (for example, if it violates any of these rules) feel free to link the person to this page and/or report the feedback to mods.
 
-### Rewarding feedback
+## Rewarding feedback
 
 If a piece of feedback has been helpful to you, you can reward that feedback by replying to it and including a `(+)` symbol in your comment. Note that editing `(+)` into an already existing comment will not work.
 
