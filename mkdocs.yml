@@ -4,7 +4,9 @@ repo_url: https://github.com/ShutUpAndWrite/community-docs
 
 pages:
 - ['index.md', 'Philosophy']
-- ['community.md', 'Community']
+- ['reddit.md', 'Reddit']
+- ['irc.md', 'IRC (Chat)']
+- ['teamspeak.md', 'TeamSpeak (Voice)']
 
 markdown_extensions:
     toc:
