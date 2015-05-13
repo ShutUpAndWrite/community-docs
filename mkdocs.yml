@@ -1,0 +1,14 @@
+site_name: Shut Up & Write
+site_url: http://www.reddit.com/r/shutupandwrite
+repo_url: https://github.com/ShutUpAndWrite/shutupandwrite.github.io
+
+pages:
+- ['index.md', 'Philosophy']
+- ['community.md', 'Community']
+
+markdown_extensions:
+    toc:
+        permalink: True
+    admonition:
+
+theme: cerulean
