@@ -155,7 +155,7 @@ Click the "Join Chat" button in the sidebar, or click [this magical link](http:/
 
 This is by no means a comprehensive list of all IRC commands, but these are the commands you'll likely be using the most.
 
-Command&nbsp;[optional]&nbsp;&lt;required&gt;|Function
+Command [optional] &lt;required&gt;|Function
 -----------------------------------|--------
 `/nick <newnick>`|Use this command to change your display name on IRC.
 `/me <text>`|Use this command to use your nickname as part of a sentence. For example, if my name was `awk`, `/me eats a cookie` would display as `* awk eats a cookie`.
@@ -172,7 +172,7 @@ If you want to give JotBot a parameter that has spaces in it, either include the
 #### Reference commands
 Use these as much as you want, but not in a sophomoric fashion (i.e. purposefully trying to get the bot to say naughty things). As is true of most JotBot commands, they work if you private message JotBot as well (e.g. `/msg JotBot !trope`).
 
-|Command&nbsp;[parameter]|What it does|
+|Command [parameter]|What it does|
 |-------|------------|
 |`!g [search term]`|Searches Google for `search term` and returns the first result if it exists.|
 |`!w [article title]`|Returns the first few lines from, and a link to, a Wikipedia article with the given title.|
@@ -244,7 +244,7 @@ More of an experiment than anything else, JotBot has the capability to store som
 
 If you'd like to view the most recently updated project information, use the `!projects` command. To store or modify your own, you'll need a Snoonet account so that JotBot knows who you are (see [IRC controls](#irc-controls) for more information on that).
 
-|Command&nbsp;[parameter]|What it does|
+|Command [parameter]|What it does|
 |------------------------|------------|
 |`!p new "[project name]" [wordcount]`|Creates a new project with the name specified by `project name`. `wordcount` is optional and defaults to 0 for a new project.|
 |`!p update "[project name]" [wordcount]`|Updates the appropriate project's wordcount. `project name` uses fuzzy string matching, which means you only need to give it *part* of the name of your project for it to recognize which project you're updating.|
