@@ -176,7 +176,7 @@ Use these as much as you want, but not in a sophomoric fashion (i.e. purposefull
 |-------|------------|
 |`!g [search term]`|Searches Google for `search term` and returns the first result if it exists.|
 |`!w [article title]`|Returns the first few lines from, and a link to, a Wikipedia article with the given title.|
-|`!trope [trope]`|(Currently out of order due to TVTropes's redesigns!) Returns a random trope from TVTropes.org, or links to `trope` if one is provided.|
+|`!trope [trope]`|Returns a random trope from TVTropes.org, or links to `trope` if one is provided.|
 |`!wotd`|Returns the Word of the Day, as decided by [Wordnik](https://www.wordnik.com/).|
 |`!define [word] [definition #]`|Defines a word. If no definition number is given, returns the first definition. Powered by Wordink.|
 |`!synonym [word]`|Returns synonyms of `word`. Powered by Wordnik.|
