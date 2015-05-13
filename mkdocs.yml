@@ -1,6 +1,6 @@
 site_name: Shut Up & Write
 site_url: http://www.reddit.com/r/shutupandwrite
-repo_url: https://github.com/ShutUpAndWrite/shutupandwrite.github.io
+repo_url: https://github.com/ShutUpAndWrite/community-docs
 
 pages:
 - ['index.md', 'Philosophy']
