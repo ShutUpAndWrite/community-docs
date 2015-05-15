@@ -115,13 +115,29 @@ You can reward as many or as few of the responses as you like. Just be aware tha
 ## Submitting content
 
 ### What makes a good question?
-Any questions related to writing are allowed, so long as they are **not** about one of the following topics.
+Any questions related to writing are allowed, so long as they do **not** fit the topics or categories mentioned in this section. *Anything* is allowed in the weekly Stupid Questions threads, however!
+
+#### Topics to avoid
 
 * **Motivation.** Nothing interesting ever comes of a discussion about motivation, staying motivated, getting motivated, or motivating someone else. Besides, it's barely connected with writing. The question "How can I get motivated to write?" could be answered in much the same way as if you'd asked it with just about any other activity.
 * **Ideas.** This comes in two flavors: "How do you get ideas?" and "What do you guys think of this idea?" The answer to the first one has been answered hundreds of times over by authors all across space and time, so you'd do better looking up their answers than asking us for ours. And for the second, virtually no ideas are good or bad &mdash; the goodness or badness comes in the idea's execution. Go write your idea, then come back.
 * **Brainstorming.** Or to put it another way: don't ask us a question that only applies to your specific story. "I don't know what to do with this character, can anyone help?" is not really a question, but a thinly-veiled attempt to get the community to do the work for you.
 
-If you absolutely must ask a question that fits into one of these categories, or you're not sure whether or not your question qualifies, the [Stupid Questions Thread](#discussion-threads) is your friend. Unlike questions that start a new thread, pretty much anything goes in Stupid Questions. Find the latest Stupid Questions post and knock yourself out.
+#### Kinds of questions to avoid
+
+In addition to those three major topics, please make sure that the question you're asking is about *writing*, not about *yourself*. There's a subtle distinction here, but it makes a huge difference in the quality of conversation that follows. Here are some examples of question formats that can sound like they are about writing, but are actually about the poster.
+
+* **"Does anyone else...?"** The Internet is a big place. The answer will always be yes.
+* **"Should I...?"** It's impossible for anyone to tell you what you should or shouldn't do, especially with something as open-ended as writing. Instead, ask a question that will help you make a more informed decision about whatever you're currently struggling with.
+* **"Is it okay if...?"** Rules are there so that you think about them before you break them. If you want to go against the conventional "rules" of writing, just do it. You don't need permission from the Internet first!
+
+Consider the question "Does anyone else outline before they write?" This is a question to which both "yes" and "no" are valid responses, but a poll doesn't make for very interesting discussion. On the other hand, the question "Should I outline before I write?" is fundamentally unanswerable since it, like so many topics in writing, comes down to personal preference.
+
+Instead, consider the question you actually want an answer to. Using our example, it's possible that the poster came to that question because they wanted to start a discussion on the pros and cons of outlining. Instead of approaching the subject in a roundabout way, just start a thread about outlining! You'll get relevant information much more quickly and make a more interesting thread to boot.
+
+#### Want to ask your question anyway?
+
+If you want to ask a question that breaks any of these rules, or you're not sure whether or not your question qualifies, the [Stupid Questions Thread](#discussion-threads) is your friend. Unlike questions that start a new thread, pretty much anything goes in Stupid Questions. Find the latest Stupid Questions post and knock yourself out.
 
 ### What makes a good content post?
 
