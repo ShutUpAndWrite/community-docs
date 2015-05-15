@@ -17,7 +17,7 @@ You can learn and talk as much about storytelling as you like, but at the end of
 Then, once you have something to work with, you're welcome to join us.
 
 ## Who this community is for
-**Shut Up & Write** is primarily a community for amateur writers who are already producing writing on at least a semi-regular basis. Some people come here to share their work and improve, others show up purely to hang out.
+**Shut Up & Write** is primarily a community for amateur writers who are already writing on at least a semi-regular basis. Some people come here to share their work and improve, others show up purely to hang out.
 
 However, it's fair to say you won't have the best time here if:
 
