@@ -32,12 +32,14 @@ Command [optional] &lt;required&gt;|Function
 `/msg NickServ GHOST <nick> <password>`|If another instance of your registered nickname is hanging around, you can use this command to knock it off the server and reclaim your nick. `nick` is the nickname you want to kill, and `password` is the password associated with that nickname (your registration password).
 
 ## JotBot controls
-You'll find JotBot in the IRC as well as the subreddit. Here, he announces activity on the subreddit, has a variety of (mostly) useful functions for reference purposes, and runs word sprints.
+You'll find JotBot in the IRC as well as the subreddit. Here, he announces activity on the subreddit, has a variety of (mostly) useful functions for reference purposes, and runs [word sprints](#sprint-commands).
 
-If you want to give JotBot a parameter that has spaces in it, either include the parameter "in quotes" or use an_underscore. So for example, `!define some example` would result in JotBot trying to define `some` and not `some example`; `!define "some example"` or `!define some_example` , on the other hand, would work as expected.
+If you want to give JotBot a parameter that has spaces in it, include the parameter "in quotes". So for example, `!define some example` would result in JotBot trying to define `some` and not `some example`; `!define "some example"`, on the other hand, would work as expected.
 
 ### Reference commands
-Use these as much as you want, but not in a sophomoric fashion (i.e. purposefully trying to get the bot to say naughty things). As is true of most JotBot commands, they work if you private message JotBot as well (e.g. `/msg JotBot !trope`).
+You can use JotBot as a quick reference if you like. His word lookups are powered by Wordnik's free API and isn't the most accurate thing in the world, but he's good for a fast mid-drafting response.
+
+Avoid using these commands in a sophomoric fashion (i.e. purposefully trying to get the bot to say or define naughty things).
 
 |Command [parameter]|What it does|
 |-------|------------|
@@ -55,74 +57,61 @@ Use these as much as you want, but not in a sophomoric fashion (i.e. purposefull
 |`!exercise`|Returns a randomized writing exercise from [ChaoticShiny](http://chaoticshiny.com/).|
 |`!et [word]`|Returns the etymology of `word`. Powered by the [Online Etymology Dictionary](http://www.etymonline.com/).|
 
-### Word sprints
+### Wordcount commands
 
-Originally inspired by [BattleJesus of NaNoWriMo fame](http://www.goodchatting.com/articles/bjguide/), word sprints are a timed writing exercise in which the goal is to draft as quickly as you can.
+Keep us up-to-date with the status of your current project with these handy commands! If you have multiple projects or would like more control over how your project information is stored, see [project commands](#project-commands) below.
 
-To start a sprint, use the command `!sprint`. By default, this will create a word sprint 30 minutes long that will begin 5 minutes after the command is run. You can optionally specify the length of the sprint (`!sprint 15` would create a 15-minute sprint, for example) or the length of the sprint and the delay before it begins (`!sprint 15 2` would make the aforementioned 15-minute sprint start in 2 minutes instead of 5).
+|Command                  |What it does             |
+|-------------------------|-------------------------|
+|`!c`                     | Displays your wordcount. |
+|`!c 42`                  | Sets your wordcount to `42`.|
+|`!c sneak 42`            | "Sneakily" sets your wordcount to `42`. "Snuck" updates are ignored by wordsprints and global chat statistics. Use this when you're setting a count that you've previously written. |
+|`!c undo`                | Undoes your previous wordcount.|
+|`!c +42`                 | Adds 42 words to your wordcount. |
+|`!c -42`                 | Subtracts 42 words from your wordcount. |
+|`!c =42`                 | Alias for `!c sneak`.|
 
-If you've started a sprint, you will automatically become a participant in that sprint. If you or anyone else uses the `!status` command, JotBot will print a message telling you whether or not the sprint has started and how long it has to go along with a list of users currently participating in the sprint.
+### Project commands
 
-To join a word sprint that someone else has made, type `!join`. To leave, use `!leave`.
+JotBot stores information on all the writing currently going on in the community.
 
-To report your wordcount at any time, use the `!wc` command followed by your wordcount. For example, `!wc 42` would set your wordcount to 42.
+Use these commands if you're curious what the rest of the chat is working on, or if you'd like to tell us what you're working on yourself. Checking on the status of other users' projects is *not* considered rude and is actually encouraged! You might find something interesting to read that way.
 
-Handily, setting your wordcount before a sprint begins will not count towards your wordcount during the sprint. In other words, if you have a document with 100 words written, using the command `!wc 100` before the sprint starts will set your initial wordcount to 100 instead of the default, 0. Then, after the sprint starts, if you set your wordcount to 300, JotBot will automatically subtract your initial wordcount from that (in this case, 100) and report the amount of words you wrote during the sprint (in this case, 200).
+|Command                            |What it does                       |
+|-----------------------------------|-----------------------------------|
+|`!p`                               | Displays a list of recently updated projects. |
+|`!p user`                          | Displays a list of `user`'s projects, if they have any. |
+|`!p search "Project Title"`        | Searches all projects in the database for `Project Title`.
+|`!new "Project Title"`             | Creates a new project called `Project Title.` |
+|`!load "Project Title"`            | Sets `Project Title` as your currently active project. All wordcount commands will edit the wordcount of this project. |
+|`!show "Project Title"`            | Displays information about `Project Title`. If no title is given, uses the currently selected project. |
+|`!rename "Old Title" "New Title"`  | Renames a project called `Old Title` to `New Title`. If no `Old Title` is given, uses the currently selected project. |
+|`!info "Project Title" Info here...`| Creates or edits `Project Title`'s description. |
+|`!delete "Project Title"`          | Deletes `Project Title`. Exact title match is required for deletion. |
 
-If the sprint has already begun and you want to set your initial wordcount, use the `!wc reset` command. `!wc reset 100` will set your initial (pre-sprint) wordcount to 100.
+### Sprint commands
 
-If you are the owner of a sprint and want to cancel a sprint for any reason, use the `!close` command. If you are not the owner, the `!close` command will do nothing. If the current owner loses connection or leaves the channel, ownership passes down to the next available participant. If there are no available participants, JotBot will set a self-destruct timer of one minute to prevent the sprint from going on without anyone in it. The sprint's current owner is always listed in bold when viewing the participant list through the `!status` command.
+Originally inspired by [BattleJesus of NaNoWriMo fame](http://www.goodchatting.com/articles/bjguide/), word sprints are a timed writing exercise in which the goal is to write as quickly as you can.
 
-Once the sprint concludes, all participants will have five minutes to finalize their wordcount with the `!final` command. Once everyone has finalized (or if five minutes has passed), JotBot will announce the winner of the sprint &mdash; the person who wrote the most.
+Use the [wordcount commands](#wordcount-commands) to keep us updated on your progress, and remember to "sneak" updates you don't want included in your sprint wordcount!
 
-You can also finalize your wordcount early if you have to leave mid-sprint. JotBot will remember a finalized wordcount even if you leave.
+Sprints are run entirely on the honor system. No one is required to share what they've written during a sprint, although of course they are welcome to do so. If you're stuck and not sure what to write, try out the `!exercise` command.
 
-Sprints are just for fun, something to get you motivated and writing alongside others (or just against the clock). All wordcount reporting is based on the honor system &mdash; no writing needs to be shared. It's a friendly, small, and above all friendly bit of competition where everyone is a winner for having gotten further in their drafts (but especially the winner).
-
-Here's what an example word sprint might look like.
-
-<pre><code class="no-highlight">&lt;SomeUser&gt; !sprint
-&lt;JotBot&gt; SomeUser has created a word sprint! This sprint will start in 5 minutes and last for 30 minutes. Type !join to join.
-&lt;SprintFanatic&gt; !join
-&lt;JotBot&gt; SprintFanatic has joined the word sprint in #shutupandwrite.
-&lt;SprintFanatic&gt; !wc 42069
-&lt;JotBot&gt; SprintFanatic's wordcount is 0 (total: 42069).
-
-...
-
-&lt;JotBot&gt; A word sprint in #shutupandwrite is starting! You have 30 minutes to write as much as you can. Use the !wc command to update your wordcount as you go. To leave, type !leave. Participants: SomeUser (0), SprintFanatic (0)
-&lt;SomeUser&gt; !wc 42
-&lt;JotBot&gt; SomeUser's wordcount is 42 (total: 42).
-&lt;SprintFanatic&gt; !wc 42100
-&lt;JotBot&gt; SprintFanatic's wordcount is 31 (total: 42100).
-
-...
-
-&lt;JotBot&gt; The word sprint in #shutupandwrite has ended. You have 5 minutes to finalize your wordcount by typing !final. Participants: SomeUser (42), SprintFanatic (31).
-&lt;SomeUser&gt; !final
-&lt;JotBot&gt; SomeUser's wordcount has been finalized at 42.
-&lt;SprintFanatic&gt; !final 42222
-&lt;JotBot&gt; SprintFanatic's wordcount has been finalized at 153.
-&lt;JotBot&gt; The winner is SprintFanatic with 153 words written!
-</code></pre>
-
-### Project storage (alpha)
-More of an experiment than anything else, JotBot has the capability to store some very basic information about your current writing projects, if you so choose. And by "very basic" I mean "literally just the wordcount right now."
-
-If you'd like to view the most recently updated project information, use the `!projects` command. To store or modify your own, you'll need a Snoonet account so that JotBot knows who you are (see [IRC controls](#irc-controls) for more information on that).
-
-|Command [parameter]|What it does|
-|------------------------|------------|
-|`!p new "[project name]" [wordcount]`|Creates a new project with the name specified by `project name`. `wordcount` is optional and defaults to 0 for a new project.|
-|`!p update "[project name]" [wordcount]`|Updates the appropriate project's wordcount. `project name` uses fuzzy string matching, which means you only need to give it *part* of the name of your project for it to recognize which project you're updating.|
-|`!p show "[project name]"`|Displays the given project's wordcount in the chat. Also uses fuzzy string matching.|
-|`!p delete "[project name]"`|Deletes a project. Requires the exact name of the project in order to delete for obvious reasons.|
-
-If you think this is a bit silly and frivolous, it is, and it's essentially the alpha stage of some much more in-depth project tracking stuff. Hold tight! There'll be more later.
+|Command                            |What it does                       |
+|-----------------------------------|-----------------------------------|
+|`!status`                          | Shows the status of the current wordsprint, if there is one. |
+|`!sprint`                          | Starts a 30-minute wordsprint 5 minutes from now. |
+|`!sprint 15`                       | Starts a 15-minute wordsprint 5 minutes from now. |
+|`!sprint 15 2`                     | Starts a 15-minute wordsprint 2 minutes from now. |
+|`!join`                            | Joins a wordsprint. |
+|`!leave`                           | Leaves a wordsprint. |
+|`!final`                           | Finalizes your wordcount. A sprint will not end until all participants have finalized their counts. |
+|`!start`                           | (Sprint owner only) Starts a wordsprint immediately. |
+|`!close`                           | (Sprint owner only) Ends a wordsprint immediately. (No winner will be announced.) |
 
 ## Word War Weekend
 
-Every weekend, we do hourly [timed word sprints](#word-sprints) in the official community chat. These word sprints take place every hour on the hour and last for 30 minutes apiece, so you'll always know when one is going or when the next one is.
+Every weekend, we do hourly [timed word sprints](#sprint-commands) in the official community chat. These word sprints take place every hour on the hour and last for 30 minutes apiece, so you'll always know when one is going or when the next one is.
 
 While a word sprint is on, all participants draft as quickly as they possibly can, and once it's over, they reveal how much they've written. The "winner" of each sprint is whoever wrote the most words. Then everyone gets a half-hour break before it starts over again!
 
