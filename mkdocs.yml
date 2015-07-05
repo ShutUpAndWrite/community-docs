@@ -3,14 +3,9 @@ site_url: http://www.reddit.com/r/shutupandwrite
 repo_url: https://github.com/ShutUpAndWrite/community-docs
 
 pages:
-- ['index.md', 'Philosophy']
-- ['reddit.md', 'Reddit']
-- ['irc.md', 'IRC (Chat)']
-- ['teamspeak.md', 'TeamSpeak (Voice)']
-
-markdown_extensions:
-    toc:
-        permalink: True
-    admonition:
+- Philosophy: index.md
+- Reddit: reddit.md
+- IRC (Chat): irc.md
+- TeamSpeak (Voice): teamspeak.md
 
 theme: cerulean
