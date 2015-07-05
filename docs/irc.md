@@ -128,3 +128,100 @@ There are a few advantages to this. For one thing, notifications are easier to..
 If you're on Windows or Linux, [HexChat](https://hexchat.github.io/) is a great option. [Colloquy](http://colloquy.info/) is available for OS X and iOS. [AndChat](http://www.andchat.net/) works well for Android phones.
 
 Whichever client you use, you'll want to connect to Snoonet (`irc.snoonet.org`) and join the `#shutupandwrite` channel.
+
+## Moderation
+
+For the most part, `#shutupandwrite` is a self-moderating channel. Folks who have a genuine interest in writing generally stick around and folks who are more interested in complaining or stirring up drama generally get bored and leave.
+
+Moderators (ops and half-ops) don't have a lot to do. Being present and friendly counts for a lot. But on the off chance something does go wrong (or you just feel like messing with people), this section is here for your reference.
+
+### What to do if someone is causing a problem
+In this case, *problem* is defined by doing something very disruptive to the community, like harassing a specific person, spamming, or making everyone in the channel crazy uncomfortable for some reason or other.
+
+1. Tell them what they're doing wrong and why it's not a good idea. In 90% of cases, this will solve all your problems. Sometimes folks just don't realize what they're doing!
+2. If they continue, give them an unambiguous, serious-sounding warning.
+3. If they still won't stop doing whatever they're doing, give them a warning `/kick`.
+4. If you've reached this point, whoever you're dealing with has a case of incurable douchery, and you can ban them without remorse.
+
+Obviously, if someone's come in with the clear intent of being a huge douche like spamming the channel with rude ASCII things, feel free to skip to the banning part.
+
+### The Moderator's Arsenal
+
+Optional parameters are given in `[brackets]`, required parameters are given in `<alligators>`. Some (usually older) clients may require the optional parameters in order to work.
+
+#### Channel kick
+
+A virtually worthless power that's more of a polite gesture than anything else. A kick removes the user from the channel, but they are free to instantly rejoin. Great for jokes though.
+
+**Command:** `/kick [#channel] <user> [reason]`
+
+#### Channel ban
+
+Bans will prevent a user from being able to speak in or rejoin a channel. How they work is a bit tricky, however!
+
+**Command:** `/mode [#channel] +b <host string>`  
+**To undo:** `/mode [#channel] -b <host string>`  
+**To view current bans:** `/mode [#channel] +b` or `/bans [#channel]`
+
+Internally, IRC represents each user as a host string in the following format:
+
+`nick!user@host`
+
+You can get this information by performing a `/whois <user>` on someone. The problem with this is that, in most cases, a user can change their `nick` or `user` parts of their host string at will, making a full `nick!user@host` ban worthless. The `host` part, however, is much more difficult to change and is usually tied to the physical location of the user.
+
+For that reason, all bans should *wildcard* the `nick` and `user` parts. Any part of a host string with an asterisk (`*`) will match any set of characters in place of where the asterisk is. So, for example, a ban using `*!*@problem.host` would match any user whose host is `problem.host`, regardless of what they've set their `user` field or `nick` to. (`*!*@*`, on the other hand, would ban *everyone*.)
+
+In some situations, you will want to ban something more specific, like the `user` field along with the `host` field. For example, all the people who use IRCcloud as their bouncer will appear to come from the same host (`somename.irccloud.com`) but have differing `user` fields (`uid00000`). In this situation, banning the host (`*!*@somename.irccloud.com`) would ban all users of IRCcloud, which you probably don't want to do. Banning the `user` field *and* `host` field, however, will only ban that specific IRCcloud user (`*!uid00000@irccloud.com`). This is a pretty obscure case though!
+
+#### Channel mute
+
+Disallows everyone from talking except for ops, halfops, and voiced users.
+
+**Command:** `/mode [#channel] +m`  
+**To undo:** `/mode [#channel] -m`
+
+#### Channel close
+
+Sets the channel to "invite-only"; anyone currently in the channel can use the invite command (`/invite [#channel] <user>`) to bring other users into the channel, but the channel can no longer be freely joined.
+
+Try to avoid using this mode if at all possible, as it requires people to message others to get invites into the channel and is basically incomprehensible to new users.
+
+**Command:** `/mode [#channel] +i`  
+**To undo:** `/mode [#channel] -i`
+
+#### Grant voice
+
+If the channel is muted, allows a user to talk.
+
+**Command:** `/voice [#channel] <user>`  
+**To undo:** `/voice [#channel] <user>`
+
+#### Make other temporary moderators
+
+In case of extreme zaniness, use the `/hop` command to temporarily promote someone else to moderator status. This status will remain until the user disconnects, leaves the channel, or uses the `/dehop` command on themselves.
+
+**Command:** `/hop [#channel] user`  
+**To undo:** `/dehop [#channel] user`
+
+#### Re-op yourself (or others)
+
+If, for whatever reason, you lose your moderator status, you can regain it through `ChanServ`.
+
+**Command:** `/msg ChanServ HOP <#channel> [user]` (use `OP` instead if you're a full channel operator)
+
+#### Unban yourself
+
+If, for whatever reason, you've managed to do the unthinkable and ban yourself by mistake, here's how to fix it.
+
+**Command:** `/msg ChanServ UNBAN [#channel]`
+
+### DEFCON 1 procedure
+
+The odds of anyone attacking a writing community are super low, but sometimes people are dumb and there's always the possibility of something going horribly wrong, so here's what to do if the proverbial shit has hit the proverbial fan and douches are flooding into the channel from all directions.
+
+1. Mute the channel (`/mode [#channel] +m`).
+2. Voice everyone who is supposed to be in the channel. (In some clients, you are able to select everyone at once and voice them with the click of a button! You should probably try doing this first instead of doing it all manually.)
+3. If necessary, make some others temporary half-ops to deal with the influx of people who will need voice to speak. Permanent moderators cannot be removed by temporary moderators.
+4. If someone is spamming the channel with joins and parts, set the channel to "auditorium" mode with `/mode [#channel] +u`. This will hide joins and parts until it is removed.
+
+By following these steps, whatever nonsense is going on will be completely invisible to the rest of the chat, which can go on happily chattin' until it blows over.
