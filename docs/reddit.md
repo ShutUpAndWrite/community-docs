@@ -56,6 +56,8 @@ Feedback request|First is free; subsequent, -20 rep
 
 All users can post one feedback request for free. Subsequent requests cost **20 rep** to post.
 
+Feedback requests must be for a piece or excerpt **under 3,500 words.** If your submission is part of a longer work, you are welcome to link to that longer work in your request with the understanding that it must not be a requirement to read. You may submit multiple pieces in the same request if the total wordcount does not exceed 3,500.
+
 To request feedback, click the "Request Feedback" button in the sidebar, and fill out the appropriate information. It is very important that you read through these guidelines at least once before submitting your request. There's quite a few of them, but following them will make sure that your feedback request is answered more quickly, and will make the experience generally more pleasant for everyone involved.
 
 Once responses start filtering in, you can decide whether or not they were helpful and [reward them accordingly](#rewarding-feedback). The integrity of our feedback system is dependent on authors dictating which feedback was genuinely helpful, and is the main source of reputation for the community.
@@ -65,6 +67,7 @@ These are **mandatory criteria** and will result in your post being removed if t
 
 Do:
 
+* **Keep feedback requests under 3,500 words.** You may request as many individual pieces of writing within that limit as you like, so long as the total ends up under 3,500 words. This is a hard limit - any requests over 3,500 words will be removed.
 * **Include [feedback] somewhere in the title.** Failure to do so will prevent JotBot from recognizing it as a feedback thread, meaning you won't be able to give points to anyone who responds. Also, requests for feedback are not allowed outside of the official feedback system, so your post will be removed.
 * **Put your word count in the title.** Being up-front about your wordcount will help others match up their current attention span with your work.
 * **Explain the purpose of the piece.** Is it an excerpt? A poem? A stand-alone short story? Something you're planning on submitting to a magazine? Context helps tremendously. A middle chapter from a novel can look like a pointless short story if you don't tell anyone what it is.
@@ -75,13 +78,13 @@ Don't:
 
 * **DON'T ASK US TO IGNORE ISSUES YOU ALREADY KNOW ARE PRESENT IN YOUR WRITING.** If you know you submission has issues, and you can fix them yourself without outside input, *fix them*. A post asking for readers to ignore blatant errors is unacceptable.
 * **DON'T SUBMIT NON-WRITING.** No outlines, no story ideas. We're here to critique writing, not thoughts.
+* **DON'T submit a piece over the 3,500 word limit and ask readers to pick a part of it to give feedback on.** This is an attempt to circumvent the word limit and will be removed. All feedback given should be for the exact same same piece or excerpt.
 * **DON'T make a post whose only purpose is to give away reputation points for doing nothing.** Having a thread that's not *really* a feedback thread, but rather an excuse to give out rep points like candy, defeats the whole purpose of a reputation-based system.
 * **DON'T put pieces > 500 words in the body of a self-post.** If your piece is under 500 words and you do include it in a self-post, double-check that you've got the formatting right. If you're linking to your piece, make sure wherever you've put it is somewhere readable and convenient for others to use. Stories hosted on sites with eye-gouging design or that require signups will be removed. When in doubt, use [Google Docs](https://docs.google.com) (rich text, Microsoft-Word-esque) or [Pastebin](http://pastebin.com) (plain text only).
 * **DON'T sockpuppet.** Yes, the one-free-post policy means you could theoretically create an infinite number of new accounts and never have to give feedback for the rest of your sorry, miserable life. We're all very proud of you for working that out, but if you're going to try to exploit the reputation system, do it in a more creative way.
 * **DON'T ask if a piece is "worth continuing," or other questions that serve only to seek validation from others.** The only person who can decide if your piece is worth continuing is you. Feedback may be able to help you make the decision, but no individual person can answer that question besides yourself, and if this is the only thing you want feedback on, it's not a worthwhile feedback post.
 
 ### Not mandatory, but good ideas
-* **Keep your submissions short.** 3,500 words is about the maximum you can reasonably expect someone to give a detailed critique about. You can try for longer, but don't expect a miracle.
 * **Avoid posting first drafts.** If you're posting a piece the same day you've spat it out, or without having at least read through it once or twice, you're asking others to do work that you should have done yourself. The purpose of feedback is to pick up where your own efforts left off. Something hot off the typewriter can almost certainly be improved by a second look before asking others to read it.
 
 ## Giving feedback
