@@ -100,8 +100,8 @@ Sprints are run entirely on the honor system. No one is required to share what t
 |Command                            |What it does                       |
 |-----------------------------------|-----------------------------------|
 |`!status`                          | Shows the status of the current wordsprint, if there is one. |
-|`!sprint`                          | Starts a 30-minute wordsprint 5 minutes from now. |
-|`!sprint 15`                       | Starts a 15-minute wordsprint 5 minutes from now. |
+|`!sprint`                          | Starts a 30-minute wordsprint on the next half-hour. |
+|`!sprint 15`                       | Starts a 15-minute wordsprint on the next half-hour. |
 |`!sprint 15 2`                     | Starts a 15-minute wordsprint 2 minutes from now. |
 |`!join`                            | Joins a wordsprint. |
 |`!leave`                           | Leaves a wordsprint. |
